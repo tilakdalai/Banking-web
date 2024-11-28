@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Bank Management System</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Bank Management System</h1>
+    <div id="menu">
+      <button onclick="BackgroundAndCreateAccount()">Create Account</button>
+      <button onclick="BackgroundAndDepositMoney()">Deposit Money</button>
+      <button onclick="BackgroundAndwithdrawMoney()">Withdraw Money</button>
+      <button onclick="displayAllAccounts()">Display All Accounts</button>
+      <button onclick="BackgroundAnddeleteAccount()">Delete Account</button>
+    </div>
+
+    <div id="output"></div>
+
+    <!-- Create Account Section -->
+    <div id="createAccount" class="section hidden">
+      <h2>Create Account</h2>
+      <input type="number" id="acno" placeholder="Account No.">
+      <input type="text" id="name" placeholder="Name">
+      <input type="text" id="type" placeholder="Type (C/S)">
+      <input type="number" id="moneyDeposit" placeholder="Initial Deposit">
+      <button onclick="createAccountHandler()">Submit</button>
+    </div>
+
+    <!-- Deposit Money Section -->
+    <div id="depositMoney" class="section hidden">
+      <h2>Deposit Money</h2>
+      <input type="number" id="depositAcno" placeholder="Account No.">
+      <input type="number" id="depositAmount" placeholder="Amount">
+      <button onclick="depositMoneyHandler()">Deposit</button>
+    </div>
+
+    <!-- Withdraw Money Section -->
+    <div id="withdrawMoney" class="section hidden">
+      <h2>Withdraw Money</h2>
+      <input type="number" id="withdrawAcno" placeholder="Account No.">
+      <input type="number" id="withdrawAmount" placeholder="Amount">
+      <button onclick="withdrawMoneyHandler()">Withdraw</button>
+    </div>
+
+    <!-- Delete Account Section -->
+    <div id="deleteAccount" class="section hidden">
+      <h2>Delete Account</h2>
+      <input type="number" id="deleteAcno" placeholder="Account No.">
+      <button onclick="deleteAccountHandler()">Delete</button>
+    </div>
+  </div>
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="bank.js"></script>
+</body>
+</html>
